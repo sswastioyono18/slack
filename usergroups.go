@@ -297,7 +297,6 @@ func (api *Client) GetUserGroupMembers(userGroup string) ([]string, error) {
 // Slack API docs: https://api.slack.com/methods/usergroups.users.list
 func (api *Client) GetUserGroupMembersContext(ctx context.Context, userGroup string) ([]string, error) {
 	values := url.Values{
-		"token":     {api.token},
 		"usergroup": {userGroup},
 	}
 
